@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 2</title>
+</head>
+
+<body>
+    <script>
+
+        //Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+
+        var soma = 0;
+
+        for (var i = 0; i < 6; i++) {
+            var valor = parseFloat(prompt("Digite o " + (i + 1) + "º número"));
+
+            soma += valor;
+        }
+        var média = soma / 6;
+        document.write("A média é: " + média);
+    </script>
+</body>
+
+</html>

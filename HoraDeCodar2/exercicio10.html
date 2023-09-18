@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 2</title>
+</head>
+
+<body>
+    <script>
+//Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:
+
+        var sexo = parseInt(prompt("Informe o seu sexo (1 para masculino, 2 para feminino):"));
+
+
+        if (sexo === 1 || sexo === 2) {
+
+            var altura = parseFloat(prompt("Informe a sua altura em metros (exemplo: 1.75):"));
+
+
+            var imc;
+            if (sexo === 1) {
+                imc = 72.7;
+            } else {
+                imc = 62.1 * altura - 44.7;
+            }
+
+
+            var numeros = [];
+
+
+            for (var i = 1; i <= 4; i++) {
+                var numero = parseFloat(prompt("Digite o " + i + "º número:"));
+
+
+                if (numero > 0 && numero < 10) {
+                    numeros.push(numero);
+                } else {
+                    alert("Pelo menos um dos números não está no intervalo permitido (maiores que 0 e menores que 10). Tente novamente.");
+                    break;
+                }
+            }
+
+
+            var soma = 0;
+            for (var j = 0; j < numeros.length; j++) {
+                soma += numeros[j];
+            }
+            var media = soma / numeros.length;
+
+
+            if (media > 5) {
+                alert("Você passou no teste. Seu IMC é " + imc.toFixed(2));
+            } else {
+                alert("Tente novamente. Seu IMC é " + imc.toFixed(2));
+            }
+        } else {
+            alert("Sexo inválido. Por favor, informe 1 para masculino ou 2 para feminino.");
+        }
+    </script>
+</body>
+
+</html>

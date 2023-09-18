@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 2</title>
+</head>
+<body>
+    <script>
+
+//Uma micro calculadora
+
+function calcular(opcao, num1, num2) {
+    switch (opcao) {
+        case 1:
+            return num1 + num2;
+        case 2:
+            return num1 - num2;
+        case 3:
+            if (num2 === 0) {
+                return "Erro: Divisão por zero!";
+            }
+            return num1 / num2;
+        case 4:
+            return num1 * num2;
+        default:
+            return "Opção inválida!";
+    }
+}
+
+
+const num1 = parseInt(prompt("Digite o primeiro valor:"));
+const num2 = parseInt(prompt("Digite o segundo valor:"));
+const opcao = parseInt(prompt("Escolha a operação:\n1. Adição\n2. Subtração\n3. Divisão\n4. Multiplicação"));
+
+
+const resultado = calcular(opcao, num1, num2);
+document.write("Resultado da operação:", resultado);
+    </script>
+</body>
+</html>
